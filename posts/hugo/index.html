@@ -41,7 +41,7 @@
               <div class="blog__info">  
                 <p> Chenst </p>  
                 <p><time>July 30, 2024</time> |   
-                    2  	                         minutes  read  
+                    3  	                         minutes  read  
                  </p>  
               </div>  
             </div>  
@@ -49,9 +49,80 @@
             <p>最近这几天在研究 hugo，还是没研究明白，主要是自己想做一个主题，类似于 hexo 的butterfly。</p>
 <p>之前使用的是 hexo</p>
 <p>hexo的主题比这个丰富，b站的教程比hugo多很多</p>
+<h2 id="目前发现的显示错误">目前发现的显示错误</h2>
+<p>代码块没有限制长度，代码过长会超过显示内容的区域</p>
 <h2 id="使用-hugo">使用 hugo</h2>
 <p><code>hugo new content posts/.../name.md</code></p>
 <p>创建一篇文章, posts可以自定义, 前面不需要斜杠, &hellip;可以是多个目录</p>
+<h2 id="git-连接-github">git 连接 github</h2>
+<p>hugo主页</p>
+<p><code>hugo --theme=(主题名字) --baseURL=&quot;https://00kid00.github.io/&quot; --buildDraft</code></p>
+<p>进入生成的 <code>publish/</code></p>
+<ol>
+<li>
+<p><code>git init</code></p>
+</li>
+<li>
+<p><code>git add .</code></p>
+</li>
+<li>
+<p>`git commit -m &ldquo;(提交信息)&rdquo;</p>
+<p>可能会提示配置提交信息:</p>
+<p><code>git commit -m --global user.name ...</code></p>
+<p><code>git commit -m --global user.email ...</code></p>
+<p>&ndash;global 是全局, 输入一次这台电脑以后所有<code>git commit</code>默认使用</p>
+<p>也可以不加 <code>--global</code>, 不过换一个文件夹, 需要再重新输一次</p>
+</li>
+<li>
+<p>在 github 创建一个仓库, 可以看下面的视频</p>
+</li>
+<li>
+<p><code>git remote add origin git@github.com:00kid00/00kid00.github.io.git</code></p>
+<p>这里可能需要先配置好 ssh密钥， 现在有点忘了， 以后需要可以自行百度</p>
+</li>
+<li>
+<p><code>git push -u origin master</code></p>
+</li>
+</ol>
+<h3 id="报错">报错</h3>
+<ol>
+<li></li>
+</ol>
+<p><code>git push -u origin master</code></p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ! <span style="color:#56b6c2">[</span>rejected<span style="color:#56b6c2">]</span>        master -&gt; master <span style="color:#56b6c2">(</span>fetch first<span style="color:#56b6c2">)</span>
+</span></span><span style="display:flex;"><span>error: failed to push some refs to <span style="color:#98c379">&#39;github.com:00kid00/00kid00.github.io.git&#39;</span>
+</span></span><span style="display:flex;"><span>hint: Updates were rejected because the remote contains work that you <span style="color:#c678dd">do</span> not
+</span></span><span style="display:flex;"><span>hint: have locally. This is usually caused by another repository pushing to
+</span></span><span style="display:flex;"><span>hint: the same ref. If you want to integrate the remote changes, use
+</span></span><span style="display:flex;"><span>hint: <span style="color:#98c379">&#39;git pull&#39;</span> before pushing again.
+</span></span><span style="display:flex;"><span>hint: See the <span style="color:#98c379">&#39;Note about fast-forwards&#39;</span> in <span style="color:#98c379">&#39;git push --help&#39;</span> <span style="color:#c678dd">for</span> details.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>git push -u origin master --force</code></p>
+<ol start="2">
+<li></li>
+</ol>
+<p>git push -u origin master`</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>error: src refspec master does not match any error: failed to push some refs to <span style="color:#98c379">&#39;github.com:00kid00/00kid00.github.io.git&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可能没有 <code>git commit</code></p>
 <h2 id="summary">.Summary</h2>
 <blockquote>
 <blockquote>
