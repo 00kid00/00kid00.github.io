@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>C&#43;&#43;</title>
+  
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+<body>
+  <header>
+    <header>  
+     <div id="web_bg"></div>
+    <nav id="nav" class="show" role="navigation">  
+        <div class="navbar__left">  
+            <a href="/"><strong>My Site</strong></a>  
+        </div>  
+        <div class="navbar__right">  
+            <a href="/blog">Blogs</a>  
+			<a href="/posts">Posts</a>
+            <a href="/categories">Categories</a>  
+        </div>  
+    </nav>  
+</header>  
+
+  </header>
+  <main>
+	<div id="posts">
+      
+<section class="section">  
+  <article>  
+    <div class="blog__container">  
+          <h1 class="blog__title">C&#43;&#43;</h1>  
+            <div class="blog__details">  
+              <div class="author-image-container">  
+                  <img src="/avatar.jpeg" alt="author-image" class="avatar" />  
+              </div>  
+              <div class="blog__info">  
+                <p> Chenst </p>  
+                <p><time>August 26, 2024</time> |   
+                    1  minute  read  
+                 </p>  
+              </div>  
+            </div>  
+          <div class="content">  
+            <h1 id="函数指针类型">函数指针类型</h1>
+<ol>
+<li>函数指针变量</li>
+</ol>
+<p><code>int (*p)(int a, int b)</code></p>
+<p>定义了一个函数指针变量 p, 它可以指向返回值为 int, 形参为 int, int 的函数</p>
+<p><code>int (*p[3]) (int a, int b)</code></p>
+<p>定义了三个函数指针变量: p[0], p[1], p[2], 它可以指向返回值为 int, 形参为 int, int 的函数</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#e5c07b">int</span> <span style="color:#61afef;font-weight:bold">max</span>(<span style="color:#e5c07b">int</span> <span style="color:#e06c75">a</span>, <span style="color:#e5c07b">int</span> <span style="color:#e06c75">b</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#e06c75">a</span> <span style="color:#56b6c2">&gt;</span> <span style="color:#e06c75">b</span> <span style="color:#56b6c2">?</span> <span style="color:#e06c75">a</span> : <span style="color:#e06c75">b</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e5c07b">int</span> <span style="color:#61afef;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#e5c07b">int</span> (<span style="color:#56b6c2">*</span><span style="color:#e06c75">p</span>) (<span style="color:#e5c07b">int</span>, <span style="color:#e5c07b">int</span>) <span style="color:#56b6c2">=</span> <span style="color:#56b6c2">&amp;</span><span style="color:#e06c75">max</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#e5c07b">int</span> <span style="color:#e06c75">a</span>, <span style="color:#e06c75">b</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">a</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>, <span style="color:#e06c75">b</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#e5c07b">int</span> <span style="color:#e06c75">d</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">p</span>(<span style="color:#e06c75">a</span>, <span style="color:#e06c75">b</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">printf</span>(<span style="color:#98c379">&#34;%d</span><span style="color:#98c379">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#e06c75">d</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#d19a66">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>函数指针类型</li>
+</ol>
+<blockquote>
+<p>定义函数指针类型，必须使用typedef，方法就是，在“定义函数指针变量”加上typedef。</p>
+</blockquote>
+<p><code>typedef int (*p) (int a, int b)</code></p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#c678dd">typedef</span> <span style="color:#61afef;font-weight:bold">int</span> (<span style="color:#56b6c2">*</span><span style="color:#e06c75">p</span>) (<span style="color:#e5c07b">int</span> <span style="color:#e06c75">a</span>, <span style="color:#e5c07b">int</span> <span style="color:#e06c75">b</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e5c07b">int</span> <span style="color:#61afef;font-weight:bold">max</span>(<span style="color:#e5c07b">int</span> <span style="color:#e06c75">a</span>, <span style="color:#e5c07b">int</span> <span style="color:#e06c75">b</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#e06c75">a</span> <span style="color:#56b6c2">&gt;</span> <span style="color:#e06c75">b</span> <span style="color:#56b6c2">?</span> <span style="color:#e06c75">a</span> : <span style="color:#e06c75">b</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e5c07b">int</span> <span style="color:#61afef;font-weight:bold">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">p</span> <span style="color:#e06c75">max_2</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">max</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#e5c07b">int</span> <span style="color:#e06c75">a</span>, <span style="color:#e06c75">b</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">a</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">1</span>, <span style="color:#e06c75">b</span> <span style="color:#56b6c2">=</span> <span style="color:#d19a66">2</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#e5c07b">int</span> <span style="color:#e06c75">d</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">max_2</span>(<span style="color:#e06c75">a</span>, <span style="color:#e06c75">b</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e06c75">printf</span>(<span style="color:#98c379">&#34;%d</span><span style="color:#98c379">\n</span><span style="color:#98c379">&#34;</span>, <span style="color:#e06c75">d</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">return</span> <span style="color:#d19a66">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考文献">参考文献</h2>
+<p><a href="https://blog.csdn.net/JUIU9527/article/details/127910852">1. typedef函数(用法和理解)</a></p>
+<p><a href="https://www.runoob.com/cprogramming/c-fun-pointer-callback.html#:~:text=%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E6%98%AF%E6%8C%87%E5%90%91%E5%87%BD%E6%95%B0%E7%9A%84%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E3%80%82,%E9%80%9A%E5%B8%B8%E6%88%91%E4%BB%AC%E8%AF%B4%E7%9A%84%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E6%98%AF%E6%8C%87%E5%90%91%E4%B8%80%E4%B8%AA%E6%95%B4%E5%9E%8B%E3%80%81%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%88%96%E6%95%B0%E7%BB%84%E7%AD%89%E5%8F%98%E9%87%8F%EF%BC%8C%E8%80%8C%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E6%98%AF%E6%8C%87%E5%90%91%E5%87%BD%E6%95%B0%E3%80%82%20%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88%E5%8F%AF%E4%BB%A5%E5%83%8F%E4%B8%80%E8%88%AC%E5%87%BD%E6%95%B0%E4%B8%80%E6%A0%B7%EF%BC%8C%E7%94%A8%E4%BA%8E%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0%E3%80%81%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E3%80%82">2. C 函数指针与回调函数</a></p>
+<h1 id="一些定义">一些定义</h1>
+<h2 id="实例化">实例化</h2>
+<blockquote>
+<p>实例化（instantiate）是指在的编程中，把用类创建对象的过程称为实例化。是将一个抽象的概念类，具体到该类实物的过程。实例化过程中一般由类名 对象名 = new 类名（参数1，参数2&hellip;参数n）构成。</p>
+</blockquote>
+<h3 id="参考文献-1">参考文献</h3>
+<p><a href="https://blog.csdn.net/fuhanghang/article/details/105777568">什么是实例化，实例化、声明、初始化的区别</a></p>
+  
+          </div>  
+        </div>  
+    <div class="blog__navigate">  
+      <div class="blog__navigateButtons">  
+        <div class="blog__navigateButtons__previous">  
+            
+          <button><a href="https://00kid00.github.io/posts/opengl/opengl/">&#8592; Previous Post: OpenGL</a>   	           </button>  
+            
+        </div>  
+        <div class="blog__navigateButtons__next">  
+            
+          <button><a href="https://00kid00.github.io/posts/markdown/markdown/">Next Post: Markdown &#8594;</a></button>  
+          
+        </div>  
+      </div>  
+  </div>  
+  </article>  
+</section>  
+
+	</div>
+  </main>
+  <footer>
+	<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.4,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'name',
+                        artist: 'artist',
+                        url: 'url.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
+
+
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

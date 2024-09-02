@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Clash</title>
+  
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+<body>
+  <header>
+    <header>  
+     <div id="web_bg"></div>
+    <nav id="nav" class="show" role="navigation">  
+        <div class="navbar__left">  
+            <a href="/"><strong>My Site</strong></a>  
+        </div>  
+        <div class="navbar__right">  
+            <a href="/blog">Blogs</a>  
+			<a href="/posts">Posts</a>
+            <a href="/categories">Categories</a>  
+        </div>  
+    </nav>  
+</header>  
+
+  </header>
+  <main>
+	<div id="posts">
+      
+<section class="section">  
+  <article>  
+    <div class="blog__container">  
+          <h1 class="blog__title">Clash</h1>  
+            <div class="blog__details">  
+              <div class="author-image-container">  
+                  <img src="/avatar.jpeg" alt="author-image" class="avatar" />  
+              </div>  
+              <div class="blog__info">  
+                <p> Chenst </p>  
+                <p><time>August 28, 2024</time> |   
+                    1  minute  read  
+                 </p>  
+              </div>  
+            </div>  
+          <div class="content">  
+            <h1 id="下载">下载</h1>
+<p>archlinux 使用 <code>sudo pacman -S clash</code></p>
+<h1 id="配置">配置</h1>
+<p>终端输入 clash， 会在 <code>~/.config/</code> 下生成一个 <code>clash/</code> 目录,</p>
+<p>由 <a href="https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb">https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb</a>, 或 <a href="https://go.runba.cyou/ssr-download/Country.mmdb">https://go.runba.cyou/ssr-download/Country.mmdb</a> 下载 <code>Country.mmdb</code></p>
+<p>并替换 <code>clash/</code> 目录下的 <code>Country.mmdb</code></p>
+<p>下载 clash 节点， 替换 <code>clash/</code>目录下的 <code>config.yaml</code>, 下载地址: <a href="https://free.datiya.com/">https://free.datiya.com/</a></p>
+<p>在 <code>.bashrc</code> 添加</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e5c07b">export</span> <span style="color:#e06c75">http_proxy</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;http://127.0.0.1:7890&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e5c07b">export</span> <span style="color:#e06c75">https_proxy</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;http://127.0.0.1:7890&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="clash-web-管理">clash web 管理</h1>
+<h2 id="下载代码">下载代码</h2>
+<p><a href="https://go.runba.cyou/ssr-download/clash-dashboard.tar.gz">clash-dashboard</a></p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv ~/Download/clash-dashboard.tar.gz ~/.config/clash/
+</span></span><span style="display:flex;"><span><span style="color:#e5c07b">cd</span> ~/.config/clash/
+</span></span><span style="display:flex;"><span>tar zxvf clash-dashboard.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="修改配置">修改配置</h2>
+<p><code>vim ~/.config/clash/comfig.yaml</code></p>
+<p>添加下面的代码, 可能external-contorller可能已经存在, 直接添加 127.0.0.1 即可</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#e06c75">external-controller</span>: <span style="color:#d19a66">127.0.0.1</span>:<span style="color:#d19a66">9090</span> <span style="color:#7f848e"># 如果你不是从本机访问，需要从其它机器访问这个Clash Dashboard ,则改为：0.0.0.0:9090</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">external-ui</span>: ./clash-dashboard <span style="color:#7f848e"># clash-dashboard的路径；</span>
+</span></span><span style="display:flex;"><span><span style="color:#e06c75">secret</span>: <span style="color:#98c379">&#39;123&#39;</span> <span style="color:#7f848e"># PaaRwW3B1Kj9 是登录web管理界面的密码，请自行设置你自己的,不要照抄教程中的密码；</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>重启 clash</p>
+<p>网页输入 127.0.0.1:9090/ui 即可打开, 在这里修改的都是临时修改</p>
+<h1 id="错误提示">错误提示</h1>
+<p>如果没有用， 重启电脑试一试。</p>
+<h1 id="参考资料">参考资料</h1>
+<p><a href="https://gincool.com/docs/%E5%B8%B8%E8%A7%84%E6%95%99%E7%A8%8B/linux%E5%AE%89%E8%A3%85clash/">1. Clash for linux 教程</a></p>
+<p><a href="https://go.runba.cyou/doc/#/linux/clashweb.html">2. Clash Web 管理教程</a></p>
+<p><a href="https://blog.csdn.net/yangxining/article/details/125118522">3. Linux系统设置全局代理（http代理，socks代理）</a></p>
+<p><a href="https://parrotsec-cn.org/t/linux-clash-dashboard/5169">4. linux下部署Clash+dashboard</a></p>
+<p><a href="https://blog.linioi.com/posts/clash-on-arch/">5. Arch Linux Clash 安装配置记录</a></p>
+<p><a href="https://zhengyang.wang/2022/03/linux-config-clash/">6. Linux下配置Clash</a></p>
+<p><a href="https://free.datiya.com/">7. 免费高速节点推荐</a></p>
+  
+          </div>  
+        </div>  
+    <div class="blog__navigate">  
+      <div class="blog__navigateButtons">  
+        <div class="blog__navigateButtons__previous">  
+            
+          <button><a href="https://00kid00.github.io/posts/markdown/markdown/">&#8592; Previous Post: Markdown</a>   	           </button>  
+            
+        </div>  
+        <div class="blog__navigateButtons__next">  
+            
+        </div>  
+      </div>  
+  </div>  
+  </article>  
+</section>  
+
+	</div>
+  </main>
+  <footer>
+	<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.4,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'name',
+                        artist: 'artist',
+                        url: 'url.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
+
+
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

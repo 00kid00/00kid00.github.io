@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Site</title>
+    <link>https://00kid00.github.io/</link>
+    <description>Recent content on My Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://00kid00.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clash</title>
+      <link>https://00kid00.github.io/posts/clash/clash/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/posts/clash/clash/</guid>
+      <description>下载 archlinux 使用 sudo pacman -S clash&#xA;配置 终端输入 clash， 会在 ~/.config/ 下生成一个 clash/ 目录,&#xA;由 https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb, 或 https://go.runba.cyou/ssr-download/Country.mmdb 下载 Country.mmdb&#xA;并替换 clash/ 目录下的 Country.mmdb&#xA;下载 clash 节点， 替换 clash/目录下的 config.yaml, 下载地址: https://free.datiya.com/&#xA;在 .bashrc 添加&#xA;1 2 export http_proxy=&amp;#34;http://127.0.0.1:7890&amp;#34; export https_proxy=&amp;#34;http://127.0.0.1:7890&amp;#34; clash web 管理 下载代码 clash-dashboard&#xA;1 2 3 mv ~/Download/clash-dashboard.tar.gz ~/.config/clash/ cd ~/.config/clash/ tar zxvf clash-dashboard.tar.gz 修改配置 vim ~/.config/clash/comfig.yaml&#xA;添加下面的代码, 可能external-contorller可能已经存在, 直接添加 127.0.0.1 即可&#xA;1 2 3 external-controller: 127.</description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://00kid00.github.io/posts/markdown/markdown/</link>
+      <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/posts/markdown/markdown/</guid>
+      <description>列表 无序列表 1 2 3 4 5 6 7 8 9 10 11 * 1 * 2 * 2 - 1 - 2 - 3 + 1 + 2 + 3 </description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://00kid00.github.io/posts/c&#43;&#43;/c&#43;&#43;/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/posts/c&#43;&#43;/c&#43;&#43;/</guid>
+      <description>函数指针类型 函数指针变量 int (*p)(int a, int b)&#xA;定义了一个函数指针变量 p, 它可以指向返回值为 int, 形参为 int, int 的函数&#xA;int (*p[3]) (int a, int b)&#xA;定义了三个函数指针变量: p[0], p[1], p[2], 它可以指向返回值为 int, 形参为 int, int 的函数&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 int max(int a, int b) { return a &amp;gt; b ? a : b; } int main() { int (*p) (int, int) = &amp;amp;max; int a, b; a = 1, b = 2; int d = p(a, b); printf(&amp;#34;%d\n&amp;#34;, d); return 0; } 函数指针类型 定义函数指针类型，必须使用typedef，方法就是，在“定义函数指针变量”加上typedef。</description>
+    </item>
+    <item>
+      <title>OpenGL</title>
+      <link>https://00kid00.github.io/posts/opengl/opengl/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/posts/opengl/opengl/</guid>
+      <description>&lt;p&gt;内容大部分摘抄自&lt;a href=&#34;https://learnopengl-cn.github.io/&#34;&gt;LearnopenGL-CN&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tmux_tips</title>
+      <link>https://00kid00.github.io/posts/tmux/tmux_tips/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/posts/tmux/tmux_tips/</guid>
+      <description>&lt;p&gt;tmux报错解决方法&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://00kid00.github.io/posts/hugo/</link>
+      <pubDate>Tue, 30 Jul 2024 20:16:54 +0800</pubDate>
+      <guid>https://00kid00.github.io/posts/hugo/</guid>
+      <description>&lt;p&gt;最近这几天在研究 hugo，还是没研究明白，主要是自己想做一个主题，类似于 hexo 的butterfly。&lt;/p&gt;&#xA;&lt;p&gt;之前使用的是 hexo&lt;/p&gt;&#xA;&lt;p&gt;hexo的主题比这个丰富，b站的教程比hugo多很多&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Css tips</title>
+      <link>https://00kid00.github.io/posts/css/</link>
+      <pubDate>Tue, 30 Jul 2024 03:17:16 +0800</pubDate>
+      <guid>https://00kid00.github.io/posts/css/</guid>
+      <description>css 注释 /* 注释内容 单行多行相同 */ </description>
+    </item>
+    <item>
+      <title>chromium tips</title>
+      <link>https://00kid00.github.io/posts/chromium/</link>
+      <pubDate>Tue, 30 Jul 2024 03:11:13 +0800</pubDate>
+      <guid>https://00kid00.github.io/posts/chromium/</guid>
+      <description>ctrl+shift+R强制刷新</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>https://00kid00.github.io/posts/post-3/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>https://00kid00.github.io/posts/post-3/</guid>
+      <description>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>https://00kid00.github.io/posts/post-2/</link>
+      <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
+      <guid>https://00kid00.github.io/posts/post-2/</guid>
+      <description>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&#xA;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia.</description>
+    </item>
+    <item>
+      <title>Post 1</title>
+      <link>https://00kid00.github.io/posts/post-1/</link>
+      <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
+      <guid>https://00kid00.github.io/posts/post-1/</guid>
+      <description>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&#xA;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.</description>
+    </item>
+    <item>
+      <title>Fundamentals of Design Principles</title>
+      <link>https://00kid00.github.io/blog/2020/fundamentals-design-principles/</link>
+      <pubDate>Sun, 27 Dec 2020 22:37:51 +0530</pubDate>
+      <guid>https://00kid00.github.io/blog/2020/fundamentals-design-principles/</guid>
+      <description>Diving deeper into design principles and methodologies Lorem&amp;hellip;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://00kid00.github.io/blog/2020/hugo-themes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/blog/2020/hugo-themes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://00kid00.github.io/blog/2020/java-spring-mvc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://00kid00.github.io/blog/2020/java-spring-mvc/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

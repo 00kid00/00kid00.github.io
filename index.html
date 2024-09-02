@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta name="generator" content="Hugo 0.133.1">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title></title>
+  
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+<body>
+  <header>
+    <header>  
+     <div id="web_bg"></div>
+    <nav id="nav" class="show" role="navigation">  
+        <div class="navbar__left">  
+            <a href="/"><strong>My Site</strong></a>  
+        </div>  
+        <div class="navbar__right">  
+            <a href="/blog">Blogs</a>  
+			<a href="/posts">Posts</a>
+            <a href="/categories">Categories</a>  
+        </div>  
+    </nav>  
+</header>  
+
+  </header>
+  <main>
+	<div id="posts">
+    
+  <h1 id="welcome-to-my--blog">Welcome to My  Blog</h1>
+<p>Welcome to my site.</p>
+
+  
+    <h2><a href="/posts/clash/clash/">Clash</a></h2>
+    下载 archlinux 使用 sudo pacman -S clash
+配置 终端输入 clash， 会在 ~/.config/ 下生成一个 clash/ 目录,
+由 https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb, 或 https://go.runba.cyou/ssr-download/Country.mmdb 下载 Country.mmdb
+并替换 clash/ 目录下的 Country.mmdb
+下载 clash 节点， 替换 clash/目录下的 config.yaml, 下载地址: https://free.datiya.com/
+在 .bashrc 添加
+1 2 export http_proxy=&#34;http://127.0.0.1:7890&#34; export https_proxy=&#34;http://127.0.0.1:7890&#34; clash web 管理 下载代码 clash-dashboard
+1 2 3 mv ~/Download/clash-dashboard.tar.gz ~/.config/clash/ cd ~/.config/clash/ tar zxvf clash-dashboard.tar.gz 修改配置 vim ~/.config/clash/comfig.yaml
+添加下面的代码, 可能external-contorller可能已经存在, 直接添加 127.0.0.1 即可
+1 2 3 external-controller: 127.
+  
+    <h2><a href="/posts/markdown/markdown/">Markdown</a></h2>
+    列表 无序列表 1 2 3 4 5 6 7 8 9 10 11 * 1 * 2 * 2 - 1 - 2 - 3 + 1 + 2 + 3 
+  
+    <h2><a href="/posts/c&#43;&#43;/c&#43;&#43;/">C&#43;&#43;</a></h2>
+    函数指针类型 函数指针变量 int (*p)(int a, int b)
+定义了一个函数指针变量 p, 它可以指向返回值为 int, 形参为 int, int 的函数
+int (*p[3]) (int a, int b)
+定义了三个函数指针变量: p[0], p[1], p[2], 它可以指向返回值为 int, 形参为 int, int 的函数
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 int max(int a, int b) { return a &gt; b ? a : b; } int main() { int (*p) (int, int) = &amp;max; int a, b; a = 1, b = 2; int d = p(a, b); printf(&#34;%d\n&#34;, d); return 0; } 函数指针类型 定义函数指针类型，必须使用typedef，方法就是，在“定义函数指针变量”加上typedef。
+  
+    <h2><a href="/posts/opengl/opengl/">OpenGL</a></h2>
+    <p>内容大部分摘抄自<a href="https://learnopengl-cn.github.io/">LearnopenGL-CN</a></p>
+  
+    <h2><a href="/posts/tmux/tmux_tips/">Tmux_tips</a></h2>
+    <p>tmux报错解决方法</p>
+  
+    <h2><a href="/posts/hugo/">Hugo</a></h2>
+    <p>最近这几天在研究 hugo，还是没研究明白，主要是自己想做一个主题，类似于 hexo 的butterfly。</p>
+<p>之前使用的是 hexo</p>
+<p>hexo的主题比这个丰富，b站的教程比hugo多很多</p>
+  
+    <h2><a href="/posts/css/">Css tips</a></h2>
+    css 注释 /* 注释内容 单行多行相同 */ 
+  
+    <h2><a href="/posts/chromium/">chromium tips</a></h2>
+    ctrl+shift+R强制刷新
+  
+    <h2><a href="/posts/post-3/">Post 3</a></h2>
+    Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.
+  
+    <h2><a href="/posts/post-2/">Post 2</a></h2>
+    Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.
+Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia.
+  
+    <h2><a href="/posts/post-1/">Post 1</a></h2>
+    Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.
+Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea.
+  
+    <h2><a href="/blog/2020/fundamentals-design-principles/">Fundamentals of Design Principles</a></h2>
+    Diving deeper into design principles and methodologies Lorem&hellip;
+  
+    <h2><a href="/blog/2020/hugo-themes/"></a></h2>
+    
+  
+    <h2><a href="/blog/2020/java-spring-mvc/"></a></h2>
+    
+  
+
+	</div>
+  </main>
+  <footer>
+	<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.4,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'name',
+                        artist: 'artist',
+                        url: 'url.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
+
+
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

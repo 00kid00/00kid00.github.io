@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Hugo</title>
+  
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+<body>
+  <header>
+    <header>  
+     <div id="web_bg"></div>
+    <nav id="nav" class="show" role="navigation">  
+        <div class="navbar__left">  
+            <a href="/"><strong>My Site</strong></a>  
+        </div>  
+        <div class="navbar__right">  
+            <a href="/blog">Blogs</a>  
+			<a href="/posts">Posts</a>
+            <a href="/categories">Categories</a>  
+        </div>  
+    </nav>  
+</header>  
+
+  </header>
+  <main>
+	<div id="posts">
+      
+<section class="section">  
+  <article>  
+    <div class="blog__container">  
+          <h1 class="blog__title">Hugo</h1>  
+            <div class="blog__details">  
+              <div class="author-image-container">  
+                  <img src="/avatar.jpeg" alt="author-image" class="avatar" />  
+              </div>  
+              <div class="blog__info">  
+                <p> Chenst </p>  
+                <p><time>July 30, 2024</time> |   
+                    2  	                         minutes  read  
+                 </p>  
+              </div>  
+            </div>  
+          <div class="content">  
+            <p>最近这几天在研究 hugo，还是没研究明白，主要是自己想做一个主题，类似于 hexo 的butterfly。</p>
+<p>之前使用的是 hexo</p>
+<p>hexo的主题比这个丰富，b站的教程比hugo多很多</p>
+<h2 id="使用-hugo">使用 hugo</h2>
+<p><code>hugo new content posts/.../name.md</code></p>
+<p>创建一篇文章, posts可以自定义, 前面不需要斜杠, &hellip;可以是多个目录</p>
+<h2 id="summary">.Summary</h2>
+<blockquote>
+<blockquote>
+<p>Let Hugo create the summary based on the first 70 words. You can change the number of words by setting the summaryLength in your site configuration.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Manually split the content with a &lt;!&ndash;more&ndash;&gt; tag in Markdown. Everything before the tag is included in the summary.</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Create a summary field in front matter.</p>
+</blockquote>
+</blockquote>
+<p>大概意思就是设置summary的长度, 使用&lt;!&ndash;more&ndash;&gt;分割summary的内容和文本内容, 在 front matter (.md开头的内容）创造一个summary</p>
+<h2 id="布局">布局</h2>
+<p><code>hugo new theme ***</code> 会创建一个默认的主题。</p>
+<p><code>baseof.html</code>是默认的格式。</p>
+<h2 id="导航栏透明">导航栏透明</h2>
+<p>header.html</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#e06c75">header</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">div</span> <span style="color:#e06c75">id</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;web_bg&#34;</span>&gt;&lt;/<span style="color:#e06c75">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">nav</span> <span style="color:#e06c75">id</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;nav&#34;</span> <span style="color:#e06c75">class</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;show&#34;</span> <span style="color:#e06c75">role</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;navigation&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#e06c75">div</span> <span style="color:#e06c75">class</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;navbar__left&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#e06c75">a</span> <span style="color:#e06c75">href</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;/&#34;</span>&gt;&lt;<span style="color:#e06c75">strong</span>&gt;{{ .Site.Title }}&lt;/<span style="color:#e06c75">strong</span>&gt;&lt;/<span style="color:#e06c75">a</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#e06c75">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#e06c75">div</span> <span style="color:#e06c75">class</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;navbar__right&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#e06c75">a</span> <span style="color:#e06c75">href</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;/blog&#34;</span>&gt;Blogs&lt;/<span style="color:#e06c75">a</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#e06c75">a</span> <span style="color:#e06c75">href</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;/posts&#34;</span>&gt;Posts&lt;/<span style="color:#e06c75">a</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#e06c75">a</span> <span style="color:#e06c75">href</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;/categories&#34;</span>&gt;Categories&lt;/<span style="color:#e06c75">a</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#e06c75">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#e06c75">nav</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#e06c75">header</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>style.css</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#<span style="color:#e06c75">nav</span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#c678dd">width</span>: <span style="color:#d19a66">100</span><span style="color:#e5c07b">%</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">height</span>: <span style="color:#d19a66">60</span><span style="color:#e5c07b">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">padding</span>: <span style="color:#d19a66">0</span> <span style="color:#d19a66">36</span><span style="color:#e5c07b">px</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">display</span>: <span style="color:#e5c07b">flex</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#c678dd">background-color</span>: <span style="color:#e5c07b">rgba</span>(<span style="color:#d19a66">248</span>, <span style="color:#d19a66">248</span>, <span style="color:#d19a66">248</span>, <span style="color:#d19a66">0.747</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#c678dd">align-items</span>: <span style="color:#e5c07b">center</span>;
+</span></span><span style="display:flex;"><span>   <span style="color:#c678dd">justify-content</span>: <span style="color:#e5c07b">space-between</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="内容居中">内容居中</h2>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#e06c75">main</span> {
+</span></span><span style="display:flex;"><span>     <span style="color:#c678dd">max-width</span>: <span style="color:#d19a66">1080</span><span style="color:#e5c07b">px</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#c678dd">margin</span>: <span style="color:#d19a66">0</span> <span style="color:#e5c07b">auto</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这两个同时在就会居中.
+2024 8 3 目前来看是将块的最大宽度设置为1080像素， margin:0 auto的作用是居中,默认可能是整个网页</p>
+<h2 id="音乐插件-2024-8-23">音乐插件 2024 8 23</h2>
+<h3 id="参考资料">参考资料</h3>
+<ol>
+<li><a href="https://lihan3238.github.io/p/hugomusic/">https://lihan3238.github.io/p/hugomusic/</a></li>
+<li><a href="https://aplayer.js.org/#/zh-Hans/">https://aplayer.js.org/#/zh-Hans/</a></li>
+</ol>
+<h3 id="to-do">to do</h3>
+<pre><code>1. 添加音乐
+2. 切换网页，音乐不会暂停
+</code></pre>
+<h3 id="示例">示例</h3>
+<p>在<code>layouts/partials/</code> 新建 <code>music.html</code>复制以下代码</p>
+<div class="highlight"><div style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">34
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">35
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">36
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">37
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">38
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">39
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">40
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">41
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">42
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">43
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">44
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#7f848e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#e06c75">html</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#e06c75">head</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#7f848e">&lt;!-- require APlayer --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">link</span> <span style="color:#e06c75">rel</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;stylesheet&#34;</span> <span style="color:#e06c75">href</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">script</span> <span style="color:#e06c75">src</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js&#34;</span>&gt;&lt;/<span style="color:#e06c75">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#7f848e">&lt;!-- require MetingJS --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">script</span> <span style="color:#e06c75">src</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js&#34;</span>&gt;&lt;/<span style="color:#e06c75">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#e06c75">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#e06c75">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">div</span> <span style="color:#e06c75">class</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;demo&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#e06c75">div</span> <span style="color:#e06c75">id</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;player1&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#e06c75">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#e06c75">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#e06c75">script</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#c678dd">var</span> <span style="color:#e06c75">ap</span> <span style="color:#56b6c2">=</span> <span style="color:#c678dd">new</span> <span style="color:#e06c75">APlayer</span>
+</span></span><span style="display:flex;"><span>            ({
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">element</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">document</span>.<span style="color:#e06c75">getElementById</span>(<span style="color:#98c379">&#39;player1&#39;</span>),
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">fixed</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">true</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">autoplay</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">false</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">mini</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">true</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">theme</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;#f8f4fc&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">loop</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;all&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">order</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;random&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">preload</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;auto&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">volume</span><span style="color:#56b6c2">:</span> <span style="color:#d19a66">0.4</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">mutex</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">true</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">listFolded</span><span style="color:#56b6c2">:</span> <span style="color:#e5c07b">true</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">listMaxHeight</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;500px&#39;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">lrcType</span><span style="color:#56b6c2">:</span> <span style="color:#d19a66">0</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e06c75">music</span><span style="color:#56b6c2">:</span> [
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                        <span style="color:#e06c75">name</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;name&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e06c75">artist</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;artist&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e06c75">url</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;url.mp3&#39;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e06c75">cover</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">&#39;cover.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                ]
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        <span style="color:#7f848e">//ap.init();
+</span></span></span><span style="display:flex;"><span><span style="color:#7f848e"></span>    &lt;/<span style="color:#e06c75">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#e06c75">body</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在 <code>layouts/_default/baseof.html</code> 中 <code>foot</code> 标签内添加 <code>{{ partial &quot;music&quot; . }}</code></p>
+<h2 id="参考资料-1">参考资料</h2>
+<h2 id="参考视频">参考视频</h2>
+<p><a href="https://www.bilibili.com/video/BV1x64y117PX/?spm_id_from=333.337.search-card.all.click&amp;vd_source=a856e7b1c71d66ec1bbf920c4861f6c2">bilibili:Hugo - 10分钟搭建 &amp; 部署个人网站/博客，简历中的博客网站怎么建</a></p>
+<h3 id="未来可能会用到">未来可能会用到</h3>
+<p><a href="https://buasis.eu.org/2024/07/19/posts-da-zi-ji-xiao-guo-de-hitokoto-html-css-js/">主页打字机效果</a></p>
+<p><a href="https://blog.loikein.one/posts/2021-04-26-hugo-custom-css-the-right-way/">如何在hugo中添加自定义css</a></p>
+<p><a href="https://lihan3238.github.io/p/hugomusic/">音乐插件</a></p>  
+          </div>  
+        </div>  
+    <div class="blog__navigate">  
+      <div class="blog__navigateButtons">  
+        <div class="blog__navigateButtons__previous">  
+            
+          <button><a href="https://00kid00.github.io/posts/css/">&#8592; Previous Post: Css tips</a>   	           </button>  
+            
+        </div>  
+        <div class="blog__navigateButtons__next">  
+            
+          <button><a href="https://00kid00.github.io/posts/tmux/tmux_tips/">Next Post: Tmux_tips &#8594;</a></button>  
+          
+        </div>  
+      </div>  
+  </div>  
+  </article>  
+</section>  
+
+	</div>
+  </main>
+  <footer>
+	<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+    <script>
+        var ap = new APlayer
+            ({
+                element: document.getElementById('player1'),
+                fixed: true,
+                autoplay: false,
+                mini: true,
+                theme: '#f8f4fc',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.4,
+                mutex: true,
+                listFolded: true,
+                listMaxHeight: '500px',
+                lrcType: 0,
+                music: [
+                    {
+                        name: 'name',
+                        artist: 'artist',
+                        url: 'url.mp3',
+                        cover: 'cover.jpg'
+                    }
+                ]
+            });
+        
+    </script>
+</body>
+
+
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
